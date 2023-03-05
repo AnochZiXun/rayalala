@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<HTML lang="zh-TW">
+	<HEAD>
+		<META charset="UTF-8">
+		<META http-equiv="X-UA-Compatible" content="IE=edge">
+		<META name="viewport" content="width=device-width, initial-scale=1.0">
+		<META name="keywords" content="">
+		<META name="description" content="">
+		<LINK href="https://fonts.googleapis.com/css?family=Fenix" rel="stylesheet" media="all" type="text/css">
+		<LINK href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic.min.css" rel="stylesheet" media="all" type="text/css">
+		<LINK href="/Content/css/grid.css" rel="stylesheet" media="all" type="text/css">
+		<LINK href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" media="all" type="text/css">
+		<LINK href="/Content/css/index.css" rel="stylesheet" media="all" type="text/css">
+		<LINK href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css" rel="stylesheet" media="all" type="text/css">
+		<LINK href="/favicon.ico" rel="shortcut icon">
+		<SCRIPT src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></SCRIPT>
+		<SCRIPT src="/Scripts/build/app/vendors.js"></SCRIPT>
+		<SCRIPT src="/Scripts/build/front/layoutcomm.js"></SCRIPT>
+		<SCRIPT src="/Scripts/build/front/banner.js"></SCRIPT>
+		<SCRIPT src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></SCRIPT>
+		<SCRIPT src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></SCRIPT>
+		<SCRIPT>var gb_approot = '/';</SCRIPT>
+		<SCRIPT src="/googleTagManager.js"></SCRIPT>
+		<TITLE>WELCOME&#58;鐳揚創智</TITLE>
+	</HEAD>
+	<BODY class="Index">
+		<NOSCRIPT><IFRAME src="https://www.googletagmanager.com/ns.html?id=GTM-KT9VFT9" width="0" style="display:none;visibility:hidden" height="0"></IFRAME></NOSCRIPT>
+		<DIV id="wrapper">
+			<HEADER id="header">
+				<H1 class="logo" title="回首頁" onclick="location.href = '/Home'" tabindex="-1">鐳揚創智</H1>
+				<BUTTON class="mobile-toggle oi" data-glyph></BUTTON>
+				<DIV class="navbar">
+					<NAV class="top-nav">
+						<DIV class="user-nav mobile-nav">
+							<A class="root mobile-nav" href="/User/Login">會員登入</A>
+						</DIV>
+						<DIV class="shopping-cart">
+							<BUTTON class="root cart-toggle" id="btnCart">購物車(<SPAN class="text-warning"><!--如果有加入購物車的話，就顯示已加入的產品數目--></SPAN>)</BUTTON>
+							<!-- mini版購物籃 -->
+							<DIV class="cart-content hidden">
+								<UL class="cart-list" id="cart-list_info"></UL>
+								<DIV class="cart-bar text-right">
+									<SPAN class="float-l">小計</SPAN>
+									<STRONG class="col-rest" id="sum_total"></STRONG>
+									<A class="btn btn-cart" href="/Order/checkout">我要結帳</A>
+								</DIV><!--.cart-bar text-right-->
+							</DIV><!--.cart-content hidden-->
+						</DIV><!--.shopping-cart-->
+						<A class="root mobile-nav-hide" href="mailto:karvino@rayala.com.tw">聯絡我們</A>
+						<A class="root mobile-nav-hide" href="/Home">回首頁</A>
+					</NAV>
+
+					<A class="btn btn-buy" href="/Products/List">立即購買</A>
+
+					<NAV id="menu">
+						<A class="" href="/News">最新消息</A>
+						<A class="" href="/Products">產品資訊</A>
+						<A class="" href="/Products/List">會員服務</A>
+						<A class="" href="/Home/Support">支援與下載</A>
+					</NAV>
+				</DIV><!--.navbar-->
+			</HEADER>
+
+			<SECTION id="banner" class="swiper-container">
+				<MAIN class="swiper-wrapper" id="setBanner"></MAIN>
+				<ASIDE class="swiper-pager"></ASIDE>
+				<SPAN class="icon-prev banner-prev">&#10094;</SPAN>
+				<SPAN class="icon-next banner-next">&#10095;</SPAN>
+			</SECTION><!--#banner.swiper-container-->
+
+			<SECTION class="intro text-white m-y-4">
+				<FIGURE class="float-l">
+					<IMG src="/Content/images/index/product.png" alt="產品圖">
+					<A href="/Products"></A>
+					<FIGCAPTION>見證ARH PASS如何幫助你<BR>整合密碼，讓生活更便利。</FIGCAPTION>
+				</FIGURE>
+				<ASIDE class="col-rest bg-success">
+					<A class="youtube-open block" href="https://www.youtube.com/channel/UCeYU3FV6drie1rYR1714ndw" target="new">&#160;</A>
+					<H4>Youtube 影片介紹</H4>
+				</ASIDE>
+			</SECTION><!--.intro.text-white m-y-4-->
+
+			<DIV id="youtube" class="modal">
+				<BUTTON class="modal-close" onclick="modalClose('youtube')">&#215;</BUTTON>
+				<DIV class="modal-content animate-zoom">
+					<IFRAME src="https://www.youtube.com/embed/YQHsXMglC9A" frameborder="0" allowfullscreen=""></IFRAME>
+				</DIV>
+			</DIV><!--#youtube.modal-->
+
+			<SECTION class="carousel swiper-container">
+				<NAV class="swiper-wrapper">
+					<A class="swiper-slide" href="/Products/List">
+						<IMG alt="帳密保護器（黑）" src="/productList/fb6762a2-6ffb-4879-99f8-d7ec4e39272e.png"><SPAN>帳密保護器（黑）</SPAN>
+					</A>
+					<A class="swiper-slide" href="/Products/List">
+						<IMG alt="帳密保護器（紅）" src="/productList/de15e52e-2b9a-49ba-8dd7-cf70d3e15b2b.png"><SPAN>帳密保護器（紅）</SPAN>
+					</A>
+					<A class="swiper-slide" href="/Products/List">
+						<IMG alt="帳密保護器（藍）" src="/productList/32cb550f-6ec3-4ad8-86bb-8cb1d3233ac2.png"><SPAN>帳密保護器（藍）</SPAN>
+					</A>
+				</NAV>
+				<SPAN class="icon-prev carousel-prev">&#10092;</SPAN>
+				<SPAN class="icon-next carousel-next">&#10093;</SPAN>
+			</SECTION><!--.carousel.swiper-container-->
+
+			<SECTION id="DL" class="download text-white row-a-0">
+				<MAIN>
+					<NAV>
+						<h2 class="font-xxxl">APP 程式下載</h2>
+						<A href="https://itunes.apple.com/us/app/alila-pass/id1190231743?mt=8" target="new" class="apple">APP Store 下載</A>
+						<A href="https://play.google.com/store/apps/details?id=tw.com.tytt.magicinputa" target="new" class="google">Google Play 下載</A>
+						<A href="" target="new" class="windows">Windows 市集下載</A>
+					</NAV>
+				</MAIN>
+				<A href="/Home/workflow" class="col-rest workflow"><STRONG>簡單方便的 ARH PASS APP使用流程</STRONG></A>
+			</SECTION><!--#DL.download.text-white row-a-0-->
+		</DIV><!-- #wrapper -->
+
+		<A class="goTop oi" title="TOP" href="#header" data-glyph="chevron-top"></A>
+
+		<FOOTER id="footer">
+			<NAV class="foot-nav">
+				<A href="/Home/AboutUs">公司簡介</A>
+				<A href="/Products/List">會員服務</A>
+				<A href="/Home/Partners">專案合作</A> 
+				<A href="mailto:karvino@rayala.com.tw">聯絡我們</A>
+			</NAV>
+			<DIV class="copyright"><SPAN class="block">Copyright &#169; 2017 RAYALALA. All rights reserved.</SPAN>鐳揚創智科技股份有限公司</DIV>
+		</FOOTER>
+		<SCRIPT>
+			var swiperCarousel = new Swiper('.carousel', {
+				nextButton: '.carousel-next',
+				prevButton: '.carousel-prev',
+				// slidesPerGroup: 3,
+				slidesPerView: 3,
+				spaceBetween: 40,
+				preventClicks: false,
+				// freeMode: true,
+				breakpoints: {
+					667: {
+						slidesPerView: 2,
+						spaceBetween: 10
+					},
+					568: {
+						slidesPerView: 1,
+						spaceBetween: 10
+					}
+				}
+			});
+			function modalOpen(id) {
+				document.getElementById(id).style.display = 'block';
+			}
+			function modalClose(id) {
+				document.getElementById(id).style.display = 'none';
+			}
+		</SCRIPT>
+	</BODY>
+</HTML>
